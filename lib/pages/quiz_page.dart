@@ -27,7 +27,7 @@ class QuizPage extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 30),
-          Image.asset('lib/images/winter.png'),
+          Image.asset('lib/images/lets-start.png'),
           const SizedBox(height: 50),
           MyHomeButton(
             onTap: () {

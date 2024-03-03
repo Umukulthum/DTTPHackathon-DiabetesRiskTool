@@ -1,5 +1,6 @@
 import 'package:firstapp/components/home_button.dart';
 import 'package:firstapp/pages/score_page.dart';
+import 'package:firstapp/pages/waist_circumference.dart';
 import 'package:flutter/material.dart';
 
 class QuizPage3 extends StatefulWidget {
@@ -22,8 +23,8 @@ class _QuizPage3State extends State<QuizPage3> {
             "What sex were you assigned at birth?",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
           ),
-          const SizedBox(height: 40),
-          Image.asset('lib/images/winter.png'),
+          const SizedBox(height: 30),
+          Image.asset('lib/images/gender.png'),
           const SizedBox(height: 30),
           //add three radio buttons
           Center(
@@ -70,11 +71,12 @@ class _QuizPage3State extends State<QuizPage3> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ScorePage(score: 56),
+                    // builder: (context) => ScorePage(score: 56),
+                    builder: (context) => WaistCircumference(),
                   ),
                 );
               },
-              name: "Let's check our score")
+              name: "Next Question")
         ],
       ),
     );

@@ -23,9 +23,9 @@ class _QuizPage2State extends State<QuizPage2> {
             "Select your age group",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
           ),
-          const SizedBox(height: 40),
-          Image.asset('lib/images/winter.png'),
-          const SizedBox(height: 30),
+          const SizedBox(height: 20),
+          Image.asset('lib/images/age_group.png'),
+          const SizedBox(height: 20),
           //add three radio buttons
           Center(
             child: Column(

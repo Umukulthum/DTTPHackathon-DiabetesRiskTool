@@ -29,7 +29,6 @@ class _LoginPageState extends State<LoginPage> {
         email: emailController.text,
         password: passwordController.text,
       );
-      Navigator.pop(context);
     } on FirebaseAuthException catch (e) {
       Navigator.pop(context);
       if (e.code == 'user-not-found') {
@@ -38,6 +37,8 @@ class _LoginPageState extends State<LoginPage> {
         wrongPasswordMessage();
       }
     }
+
+    Navigator.pop(context);
   }
 
   void wrongEmailMessage() {

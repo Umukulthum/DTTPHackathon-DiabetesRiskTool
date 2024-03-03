@@ -4,6 +4,7 @@ import 'package:firstapp/pages/profile_page.dart';
 import 'package:firstapp/pages/quiz_page.dart';
 import 'package:firstapp/pages/screen_time.dart';
 import 'package:firstapp/pages/settings_page.dart';
+import 'package:firstapp/pages/waist_circumference.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {

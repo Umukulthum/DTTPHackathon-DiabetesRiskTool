@@ -57,7 +57,7 @@ class ScorePage extends StatelessWidget {
                 ),
               );
             },
-            name: "Go back to Home Page",
+            name: "Show Recommendations",
           )
         ],
       ),
