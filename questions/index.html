@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team 38 - Diabetes??</title>
+</head>
+<body>
+  <h1>Diabetes Risk Assessment</h1>
+
+  <div id="questions">
+    <h2>Question 1:</h2>
+    <p>Select your age group:</p>
+    <input type="radio" name="q1" value="0"> 14-44 years<br>
+    <input type="radio" name="q1" value="7"> 45-54 years<br>
+    <input type="radio" name="q1" value="13"> 55-64 years<br>
+    <input type="radio" name="q1" value="15"> 65-74 years<br>
+
+    <h2>Question 2:</h2>
+    <p>Were you assigned male or female at birth?</p>
+    <input type="radio" name="q2" value="6"> Male<br>
+    <input type="radio" name="q2" value="0"> Female<br>
+
+    <h2>Question 3:</h2>
+    <p>How tall are you and how much do you weigh?</p>
+    <p>On the left-hand side of the BMI chart below, circle your height, then on the bottom of the chart circle your weight.  Find the square on the chart where your height crosses with your weight, and note which shaded area you fall into.  For example, if you were 5 feet 2 inches (or 157.5cm) and 163 pounds (or 74kg) you would fall in the LIGHT GREY area.</p>
+    <p>Select your BMI group from the following choices:</p>
+    <input type="radio" name="q3" value="0"> White - BMI less than 25<br>
+    <input type="radio" name="q3" value="4"> Light grey - BMI 25 to 29<br>
+    <input type="radio" name="q3" value="9"> Dark grey - BMI 30 to 34<br>
+    <input type="radio" name="q3" value="14"> Black - BMI 35 and over<br>
+
+    <h2>Question 4:</h2>
+    <p>Using a tape measure, place it around your waist at the level of your belly button.</p>
+    <p>Measure after breathing out (do not hold your breath) and write your results on the line below.   Then check the box that contains your measurement. (Note: this is not the same as the “waist size” on your pants).</p>
+    <p>Men - Wasit circumference: inches OR cm</p>
+    <input type="radio" name="q4" value="0"> Less than 94 cm or 37 inches<br>
+    <input type="radio" name="q4" value="4"> Between 94-102 cm or 37-40 inches<br>
+    <input type="radio" name="q4" value="6"> Over 102 cm or 40 inches<br>
+
+    <p>Women - Wasit circumference: inches OR cm</p>
+    <input type="radio" name="q4" value="0"> Less than 80 cm or 31.5 inches<br>
+    <input type="radio" name="q4" value="4"> Between 80-88 cm or 31.5-35 inches<br>
+    <input type="radio" name="q4" value="6"> Over 88 cm or 35 inches<br>
+
+    <h2>Question 5:</h2>
+    <p>Do you usually do some physical activity such as brisk walking for at least 30 minutes each day?</p>
+    <input type="radio" name="q5" value="0"> Yes<br>
+    <input type="radio" name="q5" value="1"> No<br>
+   
+
+    <h2>Question 6:</h2>
+    <p>How often do you eat vegetables or fruits?</p>
+    <input type="radio" name="q6" value="0"> Everyday<br>
+    <input type="radio" name="q6" value="2"> Not every day<br>
+
+    <h2>Question 7:</h2>
+    <p>Have you ever been told by a doctor or nurse that you have high blood pressure OR you have ever taken high blood pressure pills?</p>
+    <input type="radio" name="q7" value="4"> Yes<br>
+    <input type="radio" name="q7" value="0"> No or don't know<br>
+   
+
+    <h2>Question 8:</h2>
+    <p>Have you ever been found to have a high blood sugar either from a blood test, during an illness, or during pregnancy?</p>
+    <input type="radio" name="q8" value="14"> Yes<br>
+    <input type="radio" name="q8" value="0"> No or don't know<br>
+   
+
+    <h2>Question 9:</h2>
+    <p>Have you ever given birth to a large baby weighing 9 pounds (4.1 kg) or more?</p>
+    <input type="radio" name="q9" value="1"> Yes<br>
+    <input type="radio" name="q9" value="0"> No, don't know or not applicable<br>
+ 
+
+    <h2>Question 10:</h2>
+    <p>Have any of your blood relatives ever been diagnosed with diabetes? Check ALL that apply</p>
+    <input type="checkbox" name="q10" value="2"> Mother<br>
+    <input type="checkbox" name="q10" value="2"> Father<br>
+    <input type="checkbox" name="q10" value="2"> Brothers/Sisters<br>
+    <input type="checkbox" name="q10" value="2"> Children<br>
+    <input type="checkbox" name="q10" value="0"> Other<br>
+    <input type="checkbox" name="q10" value="0"> No/don't know<br>
+
+    <h2>Question 11:</h2>
+    <p>Please check off which of the following ethnic groups your biological parents belong to: (Choose only one score, the highest)</p>
+    <input type="radio" name="q11" value="0"> White (Caucasian)<br>
+    <input type="radio" name="q11" value="3"> Aboriginal<br>
+    <input type="radio" name="q11" value="5"> Black (Afro-Caribbean)<br>
+    <input type="radio" name="q11" value="10"> East Asian (Chinese, Vietnamese, Filipino, Korean etc)<br>
+    <input type="radio" name="q11" value="11"> South Asian (East Indian, Pakistani, Sri Lankan, etc)<br>
+    <input type="radio" name="q11" value="3"> Other non-white (Latin American, Arab, West Asian) <br>
+
+    <h2>Question 12:</h2>
+    <p>Select your age group:</p>
+    <input type="radio" name="q12" value="5"> Some high school or less<br>
+    <input type="radio" name="q12" value="1"> High school diploma<br>
+    <input type="radio" name="q12" value="0"> Some college or university<br>
+    <input type="radio" name="q12" value="0"> University or college degree<br>
+
+    <button onclick="calculateScore()">Submit</button>
+
+  </div>
+
+  <div id="result" style="display: none;">
+    <h2>Your Score:</h2>
+    <p id="score"></p>
+  </div>
+
+  <script>
+    function calculateScore() {
+      var score = 0;
+      var inputs = document.querySelectorAll('input[type="radio"]:checked');
+      for (var i = 0; i < inputs.length; i++) {
+        score += parseInt(inputs[i].value);
+      }
+      document.getElementById('result').style.display = 'block';
+      document.getElementById('score').innerHTML = score;
+    }
+  </script>
+</body>
+</html>
