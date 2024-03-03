@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firstapp/components/home_button.dart';
 import 'package:firstapp/pages/profile_page.dart';
 import 'package:firstapp/pages/quiz_page.dart';
+import 'package:firstapp/pages/screen_time.dart';
 import 'package:firstapp/pages/settings_page.dart';
 import 'package:flutter/material.dart';
 
@@ -50,18 +51,48 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: [
           const SizedBox(height: 22),
-          MyHomeButton(onTap: () {}, name: 'Daily Log'),
+          MyHomeButton(
+              onTap: () {
+                // Navigate to the next page when the button is tapped
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          UnderConstruction()), // Replace NextPage() with your actual next page widget
+                );
+              },
+              name: 'Daily Log'),
           const SizedBox(height: 25),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Flexible(
                 fit: FlexFit.tight,
-                child: MyHomeButton(onTap: () {}, name: 'Fitness'),
+                child: MyHomeButton(
+                    onTap: () {
+                      // Navigate to the next page when the button is tapped
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                UnderConstruction()), // Replace NextPage() with your actual next page widget
+                      );
+                    },
+                    name: 'Fitness'),
               ),
               Flexible(
                 fit: FlexFit.tight,
-                child: MyHomeButton(onTap: () {}, name: 'Screen time'),
+                child: MyHomeButton(
+                    onTap: () {
+                      // Navigate to the next page when the button is tapped
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                UnderConstruction()), // Replace NextPage() with your actual next page widget
+                      );
+                    },
+                    name: 'Screen time'),
               ),
             ],
           ),
@@ -71,11 +102,31 @@ class _HomePageState extends State<HomePage> {
             children: [
               Flexible(
                 fit: FlexFit.tight,
-                child: MyHomeButton(onTap: () {}, name: 'Meals'),
+                child: MyHomeButton(
+                    onTap: () {
+                      // Navigate to the next page when the button is tapped
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                UnderConstruction()), // Replace NextPage() with your actual next page widget
+                      );
+                    },
+                    name: 'Meals'),
               ),
               Flexible(
                 fit: FlexFit.tight,
-                child: MyHomeButton(onTap: () {}, name: 'Affirmations'),
+                child: MyHomeButton(
+                    onTap: () {
+                      // Navigate to the next page when the button is tapped
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                UnderConstruction()), // Replace NextPage() with your actual next page widget
+                      );
+                    },
+                    name: 'Affirmations'),
               ),
             ],
           ),
@@ -85,7 +136,17 @@ class _HomePageState extends State<HomePage> {
             'lib/images/winter.png',
           ),
           const SizedBox(height: 20),
-          MyHomeButton(onTap: () {}, name: 'Your best day to date'),
+          MyHomeButton(
+              onTap: () {
+                // Navigate to the next page when the button is tapped
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          UnderConstruction()), // Replace NextPage() with your actual next page widget
+                );
+              },
+              name: 'Your best day to date'),
           const SizedBox(height: 50),
           // Navigation bar
           Container(
@@ -133,7 +194,8 @@ class _HomePageState extends State<HomePage> {
                   } else if (index == 2) {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => SettingsPage()),
+                      MaterialPageRoute(
+                          builder: (context) => UnderConstruction()),
                     );
                   } else if (index == 3) {
                     Navigator.push(
