@@ -195,8 +195,7 @@ class _HomePageState extends State<HomePage> {
                   } else if (index == 2) {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => UnderConstruction()),
+                      MaterialPageRoute(builder: (context) => SettingsPage()),
                     );
                   } else if (index == 3) {
                     Navigator.push(
