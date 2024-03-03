@@ -1,13 +1,17 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firstapp/components/home_button.dart';
+import 'package:firstapp/pages/profile_page.dart';
+import 'package:firstapp/pages/quiz_page.dart';
+import 'package:firstapp/pages/settings_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
   static const List<Widget> _widgetOptions = <Widget>[
     Text('Home Page'),
-    Text('Search Page'),
-    Text('Profile Page'),
+    ProfilePage(),
+    SettingsPage(),
+    QuizPage()
   ];
 
   @override
@@ -47,7 +51,7 @@ class _HomePageState extends State<HomePage> {
         children: [
           const SizedBox(height: 22),
           MyHomeButton(onTap: () {}, name: 'Daily Log'),
-          const SizedBox(height: 30),
+          const SizedBox(height: 25),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -61,7 +65,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
-          const SizedBox(height: 30),
+          const SizedBox(height: 25),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -80,40 +84,69 @@ class _HomePageState extends State<HomePage> {
           Image.asset(
             'lib/images/winter.png',
           ),
-          const SizedBox(height: 30),
+          const SizedBox(height: 20),
           MyHomeButton(onTap: () {}, name: 'Your best day to date'),
-          const SizedBox(height: 30),
+          const SizedBox(height: 50),
           // Navigation bar
           Container(
             child: BottomNavigationBar(
-              items: const <BottomNavigationBarItem>[
-                BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.home,
-                    color: Color.fromARGB(255, 0, 0, 0),
+                items: const <BottomNavigationBarItem>[
+                  BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.home,
+                      color: Color.fromARGB(255, 0, 0, 0),
+                    ),
+                    label: 'Home',
                   ),
-                  label: 'Home',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.person,
-                    color: Color.fromARGB(255, 0, 0, 0),
+                  BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.person,
+                      color: Color.fromARGB(255, 0, 0, 0),
+                    ),
+                    label: 'Profile',
                   ),
-                  label: 'Profile',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.settings,
-                    color: Color.fromARGB(255, 0, 0, 0),
+                  BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.settings,
+                      color: Color.fromARGB(255, 0, 0, 0),
+                    ),
+                    label: 'Settings',
                   ),
-                  label: 'Settings',
-                ),
-              ],
-              currentIndex: _selectedIndex,
-              selectedItemColor: Color.fromARGB(255, 0, 0, 0),
-              onTap: NavigateTo,
-              backgroundColor: Colors.yellow,
-            ),
+                  BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.work,
+                      color: Color.fromARGB(255, 0, 0, 0),
+                    ),
+                    label: 'Quiz',
+                  ),
+                ],
+                backgroundColor: Colors.yellow,
+                currentIndex: _selectedIndex,
+                selectedItemColor: Color.fromARGB(255, 0, 0, 0),
+                onTap: (index) {
+                  NavigateTo(index);
+                  if (index == 1) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ProfilePage()),
+                    );
+                  } else if (index == 2) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SettingsPage()),
+                    );
+                  } else if (index == 3) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => QuizPage()),
+                    );
+                  } else if (index == 0) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomePage()),
+                    );
+                  }
+                }),
           ),
         ],
       ),
