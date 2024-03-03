@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "273690048809",
+    "project_id": "auth-tutorial-afbd8",
+    "storage_bucket": "auth-tutorial-afbd8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:273690048809:android:05606f146c1c88a6829f38",
+        "android_client_info": {
+          "package_name": "com.example.firstapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD38lYdv260Jfdlwn7vIRxf8SqY_Nqq-Ro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
