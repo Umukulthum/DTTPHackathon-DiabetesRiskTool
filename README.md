@@ -10,5 +10,8 @@ To login and test out the app, the credentials are as follows:
 Email: test@gmail.com
 Password: anreet123
 
+## Running on emulator 
+The best emulator to run the app is the Pixel 3a API 34
+
 
 
